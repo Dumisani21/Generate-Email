@@ -11,16 +11,13 @@ file = 'emails.txt'
 def create_email(fname, lname):
 
     if not len(fname) < 3:
-        fname_length = randint(2, len(fname))
-    else:
-        fname_length = len(fname)
+        fname_length = randint(2, len(fname)//2)
+        fname = fname[:fname_length]
 
     if not len(lname) < 3:
-        lname_length = randint(2, len(lname))
-    else:
-        lname_length = len(lname)
+        lname_length = randint(2, len(lname)//2)
+        lname = lname[:lname_length]
 
-    print()
 
     list_info = []
     list_info.append(fname)
